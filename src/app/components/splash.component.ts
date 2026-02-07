@@ -7,7 +7,7 @@ import { NgOptimizedImage } from '@angular/common';
   standalone: true,
   imports: [RouterLink, NgOptimizedImage],
   template: `
-    <div class="h-screen w-full flex flex-col items-center justify-center bg-white px-6 py-10">
+    <div class="h-screen w-full flex flex-col items-center justify-center bg-white px-6">
       <div class="flex-1 flex flex-col items-center justify-center w-full">
         <!-- Logo Text -->
         <h1 class="text-4xl font-extrabold text-brand-green mb-8 tracking-wider">Elif-BA</h1>
