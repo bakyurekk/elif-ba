@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ng serve",
     "build": "ng build",
+    "build:gh-pages": "ng build --base-href /elif-ba/",
     "preview": "ng serve --configuration=production"
   },
   "dependencies": {
