@@ -1,0 +1,29 @@
+{
+  "name": "elif-ba",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ng serve",
+    "build": "ng build",
+    "build:gh-pages": "ng build --base-href /elif-ba/",
+    "preview": "ng serve --configuration=production"
+  },
+  "dependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
+    "@angular/router": "^19.0.0",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@angular/build": "^19.0.0",
+    "@angular/cli": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.14.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.6.0"
+  }
+}
