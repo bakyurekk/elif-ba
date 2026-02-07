@@ -35,7 +35,7 @@ jobs:
         run: pnpm install
 
       - name: Build for GitHub Pages
-        run: pnpm build:gh-pages
+        run: pnpm build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

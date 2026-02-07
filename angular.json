@@ -17,7 +17,10 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.json",
             "assets": [
-              { "glob": "**/*", "input": "public" }
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -44,9 +47,6 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
-          "options": {
-            "port": 3000
-          },
           "configurations": {
             "production": {
               "buildTarget": "elif-ba:build:production"
@@ -55,7 +55,10 @@
               "buildTarget": "elif-ba:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "hmr": false
+          }
         }
       }
     }
