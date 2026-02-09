@@ -20,8 +20,8 @@ interface DailyStat {
     <div class="min-h-screen bg-white pb-24">
        <!-- Header -->
        <div class="border-b-2 border-brand-gray px-4 py-4 flex justify-between items-center bg-white sticky top-0 z-10">
-          <h1 class="text-xl font-bold text-gray-400 uppercase tracking-widest text-center w-full">Profile</h1>
-          <button class="absolute right-4 text-brand-blue font-bold uppercase text-sm hover:bg-blue-50 px-3 py-1 rounded-xl transition-colors">Settings</button>
+          <h1 class="text-xl font-bold text-gray-400 uppercase tracking-widest text-center w-full">Profil</h1>
+          <button class="absolute right-4 text-brand-blue font-bold uppercase text-sm hover:bg-blue-50 px-3 py-1 rounded-xl transition-colors">Ayarlar</button>
        </div>
 
        <!-- User Info -->
@@ -34,29 +34,29 @@ interface DailyStat {
               </div>
            </div>
            
-           <h2 class="text-2xl font-extrabold text-gray-800">Student Learner</h2>
-           <p class="text-gray-500 font-medium">Joined September 2023</p>
+           <h2 class="text-2xl font-extrabold text-gray-800">Öğrenci</h2>
+           <p class="text-gray-500 font-medium">Eylül 2023'te katıldı</p>
            
            <!-- User Type Badge -->
            <div class="mt-2 bg-brand-gray/20 px-3 py-1 rounded-lg text-xs font-bold uppercase text-gray-500 tracking-wide">
-               {{ game.userType() }} ACCOUNT
+               {{ game.userType() }} HESABI
            </div>
            
            <div class="flex space-x-6 mt-6 w-full justify-center">
                <div class="flex flex-col items-center">
                    <span class="material-symbols-rounded text-brand-yellow text-2xl">bolt</span>
                    <span class="font-extrabold text-gray-700 text-xl">{{ game.xp() }}</span>
-                   <span class="text-xs text-gray-400 font-bold uppercase">Total XP</span>
+                   <span class="text-xs text-gray-400 font-bold uppercase">Toplam XP</span>
                </div>
                <div class="flex flex-col items-center">
                    <span class="material-symbols-rounded text-brand-red text-2xl">local_fire_department</span>
                    <span class="font-extrabold text-gray-700 text-xl">{{ game.streak() }}</span>
-                   <span class="text-xs text-gray-400 font-bold uppercase">Day Streak</span>
+                   <span class="text-xs text-gray-400 font-bold uppercase">Gün Serisi</span>
                </div>
                <div class="flex flex-col items-center">
                    <span class="material-symbols-rounded text-brand-purple text-2xl">military_tech</span>
-                   <span class="font-extrabold text-gray-700 text-xl">Bronze</span>
-                   <span class="text-xs text-gray-400 font-bold uppercase">League</span>
+                   <span class="font-extrabold text-gray-700 text-xl">Bronz</span>
+                   <span class="text-xs text-gray-400 font-bold uppercase">Lig</span>
                </div>
            </div>
        </div>
@@ -65,8 +65,8 @@ interface DailyStat {
        <div class="p-6 border-b-2 border-gray-100">
             <div class="mb-6 flex justify-between items-start">
                 <div>
-                    <h3 class="font-extrabold text-xl text-gray-800">Weekly Activity</h3>
-                    <p class="text-gray-500 font-medium text-sm">Target: {{ game.dailyGoal() }} mins / day</p>
+                    <h3 class="font-extrabold text-xl text-gray-800">Haftalık Aktivite</h3>
+                    <p class="text-gray-500 font-medium text-sm">Hedef: {{ game.dailyGoal() }} dk / gün</p>
                 </div>
                 <div class="bg-brand-blue/10 rounded-lg p-2">
                     <span class="material-symbols-rounded text-brand-blue">target</span>
@@ -115,7 +115,7 @@ interface DailyStat {
                     <div>
                        <div class="font-extrabold text-lg">{{ day.fullDay }}</div>
                        <div class="text-sm opacity-80 font-medium">
-                          {{ day.lessons > 0 ? day.lessons + ' lessons completed' : (day.status === 'FUTURE' ? 'Upcoming' : 'No lessons completed') }}
+                          {{ day.lessons > 0 ? day.lessons + ' ders tamamlandı' : (day.status === 'FUTURE' ? 'Yaklaşan' : 'Tamamlanan ders yok') }}
                        </div>
                     </div>
                     <div class="flex items-center space-x-2 bg-white/10 px-3 py-1.5 rounded-xl">
@@ -129,39 +129,39 @@ interface DailyStat {
             <div class="grid grid-cols-2 gap-3">
                  <div class="border-2 border-gray-100 rounded-2xl p-3 flex flex-col items-center justify-center bg-gray-50">
                      <span class="text-2xl font-extrabold text-gray-700">{{ totalWeekLessons() }}</span>
-                     <span class="text-xs font-bold text-gray-400 uppercase">Week Lessons</span>
+                     <span class="text-xs font-bold text-gray-400 uppercase">Bu Hafta Dersler</span>
                  </div>
                  <div class="border-2 border-gray-100 rounded-2xl p-3 flex flex-col items-center justify-center bg-gray-50">
                      <span class="text-2xl font-extrabold text-brand-yellow">{{ totalWeekXp() }}</span>
-                     <span class="text-xs font-bold text-gray-400 uppercase">Week XP</span>
+                     <span class="text-xs font-bold text-gray-400 uppercase">Bu Hafta XP</span>
                  </div>
                  <div class="border-2 border-gray-100 rounded-2xl p-3 flex flex-col items-center justify-center bg-gray-50">
                      <div class="flex items-center">
                         <span class="material-symbols-rounded text-brand-red mr-1">local_fire_department</span>
                         <span class="text-2xl font-extrabold text-gray-700">{{ game.streak() }}</span>
                      </div>
-                     <span class="text-xs font-bold text-gray-400 uppercase">Current Streak</span>
+                     <span class="text-xs font-bold text-gray-400 uppercase">Mevcut Seri</span>
                  </div>
                  <div class="border-2 border-gray-100 rounded-2xl p-3 flex flex-col items-center justify-center bg-gray-50">
                       <div class="flex items-center">
                         <span class="material-symbols-rounded text-brand-yellow mr-1">emoji_events</span>
                         <span class="text-2xl font-extrabold text-gray-700">14</span>
                      </div>
-                     <span class="text-xs font-bold text-gray-400 uppercase">Best Streak</span>
+                     <span class="text-xs font-bold text-gray-400 uppercase">En İyi Seri</span>
                  </div>
             </div>
        </div>
 
        <!-- Stats Section -->
        <div class="p-6">
-          <h3 class="font-extrabold text-xl text-gray-800 mb-4">Course Statistics</h3>
+          <h3 class="font-extrabold text-xl text-gray-800 mb-4">Kurs İstatistikleri</h3>
           
           <div class="grid grid-cols-2 gap-4">
              <div class="border-2 border-gray-200 rounded-2xl p-4 flex items-center space-x-3">
                  <span class="material-symbols-rounded text-brand-green text-3xl">check_circle</span>
                  <div>
                     <div class="font-extrabold text-lg text-gray-700">{{ game.progress() }}%</div>
-                    <div class="text-xs text-gray-400 font-bold uppercase">Course</div>
+                    <div class="text-xs text-gray-400 font-bold uppercase">Kurs</div>
                  </div>
              </div>
              
@@ -169,7 +169,7 @@ interface DailyStat {
                  <span class="material-symbols-rounded text-brand-blue text-3xl">school</span>
                  <div>
                     <div class="font-extrabold text-lg text-gray-700">24</div>
-                    <div class="text-xs text-gray-400 font-bold uppercase">Words</div>
+                    <div class="text-xs text-gray-400 font-bold uppercase">Kelimeler</div>
                  </div>
              </div>
           </div>
@@ -178,8 +178,8 @@ interface DailyStat {
        <!-- Achievements -->
        <div class="p-6 pt-0">
           <div class="flex justify-between items-end mb-4">
-             <h3 class="font-extrabold text-xl text-gray-800">Achievements</h3>
-             <button class="text-brand-blue font-bold uppercase text-xs">View All</button>
+             <h3 class="font-extrabold text-xl text-gray-800">Başarılar</h3>
+             <button class="text-brand-blue font-bold uppercase text-xs">Tümünü Gör</button>
           </div>
 
           <div class="space-y-4">
@@ -188,8 +188,8 @@ interface DailyStat {
                       <span class="material-symbols-rounded text-white text-3xl">local_fire_department</span>
                   </div>
                   <div class="flex-1">
-                      <h4 class="font-extrabold text-gray-700">Wildfire</h4>
-                      <p class="text-sm text-gray-500 font-medium mb-2">Reach a 3 day streak</p>
+                      <h4 class="font-extrabold text-gray-700">Ateş</h4>
+                      <p class="text-sm text-gray-500 font-medium mb-2">3 günlük seri yapın</p>
                       <!-- Progress Bar -->
                       <div class="w-full bg-gray-200 rounded-full h-3">
                           <div class="bg-brand-yellow h-3 rounded-full" style="width: 100%"></div>
@@ -202,8 +202,8 @@ interface DailyStat {
                       <span class="material-symbols-rounded text-white text-3xl">menu_book</span>
                   </div>
                   <div class="flex-1">
-                      <h4 class="font-extrabold text-gray-500">Scholar</h4>
-                      <p class="text-sm text-gray-400 font-medium mb-2">Learn 50 new words</p>
+                      <h4 class="font-extrabold text-gray-500">Bilgin</h4>
+                      <p class="text-sm text-gray-400 font-medium mb-2">50 yeni kelime öğrenin</p>
                        <div class="w-full bg-gray-200 rounded-full h-3">
                           <div class="bg-brand-green h-3 rounded-full" style="width: 15%"></div>
                       </div>
@@ -220,13 +220,13 @@ export class ProfileComponent {
   game = inject(GameService);
 
   weekStats = signal<DailyStat[]>([
-    { id: 1, day: 'M', fullDay: 'Monday', status: 'COMPLETED', xp: 45, lessons: 3 },
-    { id: 2, day: 'T', fullDay: 'Tuesday', status: 'COMPLETED', xp: 30, lessons: 2 },
-    { id: 3, day: 'W', fullDay: 'Wednesday', status: 'COMPLETED', xp: 15, lessons: 1 },
-    { id: 4, day: 'T', fullDay: 'Thursday', status: 'MISSED', xp: 0, lessons: 0 },
-    { id: 5, day: 'F', fullDay: 'Friday', status: 'CURRENT', xp: 10, lessons: 1 },
-    { id: 6, day: 'S', fullDay: 'Saturday', status: 'FUTURE', xp: 0, lessons: 0 },
-    { id: 7, day: 'S', fullDay: 'Sunday', status: 'FUTURE', xp: 0, lessons: 0 },
+    { id: 1, day: 'P', fullDay: 'Pazartesi', status: 'COMPLETED', xp: 45, lessons: 3 },
+    { id: 2, day: 'S', fullDay: 'Salı', status: 'COMPLETED', xp: 30, lessons: 2 },
+    { id: 3, day: 'Ç', fullDay: 'Çarşamba', status: 'COMPLETED', xp: 15, lessons: 1 },
+    { id: 4, day: 'P', fullDay: 'Perşembe', status: 'MISSED', xp: 0, lessons: 0 },
+    { id: 5, day: 'C', fullDay: 'Cuma', status: 'CURRENT', xp: 10, lessons: 1 },
+    { id: 6, day: 'C', fullDay: 'Cumartesi', status: 'FUTURE', xp: 0, lessons: 0 },
+    { id: 7, day: 'P', fullDay: 'Pazar', status: 'FUTURE', xp: 0, lessons: 0 },
   ]);
 
   selectedDay = signal<DailyStat | null>(this.weekStats()[4]);

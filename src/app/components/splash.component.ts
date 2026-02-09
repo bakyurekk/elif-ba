@@ -18,17 +18,17 @@ import { NgOptimizedImage } from '@angular/common';
         </div>
 
         <p class="text-xl text-gray-500 font-bold text-center max-w-xs leading-relaxed">
-          The free, fun, and effective way to learn Arabic letters!
+          Arap harflerini öğrenmenin ücretsiz, eğlenceli ve etkili yolu!
         </p>
       </div>
 
       <div class="w-full space-y-4 mb-8">
         <a routerLink="/onboarding" class="block w-full text-center bg-brand-green text-white font-bold text-lg py-4 rounded-2xl border-b-4 border-brand-greenDark active:border-b-0 active:translate-y-1 transition-all uppercase tracking-wide">
-          Get Started
+          Başla
         </a>
         
         <button class="block w-full text-center bg-white text-brand-green font-bold text-lg py-4 rounded-2xl border-2 border-brand-gray border-b-4 active:border-b-2 active:translate-y-0.5 transition-all uppercase tracking-wide">
-          I already have an account
+          Zaten bir hesabım var
         </button>
       </div>
     </div>

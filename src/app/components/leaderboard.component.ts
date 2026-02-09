@@ -22,10 +22,10 @@ interface RankUser {
        <!-- Header -->
        <div class="bg-white border-b-2 border-gray-100 sticky top-0 z-10 px-4 pt-4 pb-2 shadow-sm">
           <h1 class="text-xl font-extrabold text-gray-700 text-center w-full uppercase tracking-widest mb-1">
-            {{ game.userType() === 'CHILD' ? 'Star Learners' : 'Leaderboard' }}
+            {{ game.userType() === 'CHILD' ? 'Yıldız Öğrenciler' : 'Liderlik Tablosu' }}
           </h1>
           <p class="text-center text-xs font-bold text-gray-400 mb-4">
-            {{ game.userType() === 'CHILD' ? 'Look at all these stars!' : 'See how you compare this week' }}
+            {{ game.userType() === 'CHILD' ? 'Tüm bu yıldızlara bakın!' : 'Bu hafta nasıl karşılaştığınızı görün' }}
           </p>
 
           <!-- Tabs -->
@@ -33,12 +33,12 @@ interface RankUser {
              <button (click)="tab.set('WEEKLY')" 
                      class="flex-1 py-2 rounded-lg transition-all duration-200"
                      [ngClass]="tab() === 'WEEKLY' ? 'bg-white text-brand-green shadow-sm scale-100' : 'text-gray-400 hover:text-gray-500'">
-                Weekly
+                Haftalık
              </button>
              <button (click)="tab.set('ALL_TIME')" 
                      class="flex-1 py-2 rounded-lg transition-all duration-200"
                      [ngClass]="tab() === 'ALL_TIME' ? 'bg-white text-brand-green shadow-sm scale-100' : 'text-gray-400 hover:text-gray-500'">
-                All Time
+                Tüm Zamanlar
              </button>
           </div>
        </div>
@@ -74,11 +74,11 @@ interface RankUser {
                   <!-- Info -->
                   <div class="flex-1">
                      <h3 class="font-bold text-gray-800" [ngClass]="{'text-brand-green': user.isCurrentUser}">
-                        {{ user.isCurrentUser ? 'You' : user.name }}
+                        {{ user.isCurrentUser ? 'Sen' : user.name }}
                      </h3>
                      @if(user.trend === 'UP') {
                         <div class="flex items-center text-[10px] font-bold text-brand-green">
-                           <span class="material-symbols-rounded text-sm">arrow_drop_up</span> Rising
+                           <span class="material-symbols-rounded text-sm">arrow_drop_up</span> Yükselişte
                         </div>
                      }
                   </div>
@@ -98,14 +98,14 @@ interface RankUser {
                     #{{ currentUserStats()?.rank ?? '-' }}
                 </div>
                 <div>
-                   <div class="font-bold text-sm text-gray-300 uppercase">Your Rank</div>
+                   <div class="font-bold text-sm text-gray-300 uppercase">Sıralaman</div>
                    <div class="font-extrabold text-white text-lg">{{ currentUserStats()?.xp }} XP</div>
                 </div>
             </div>
             
             <div class="flex flex-col items-end">
                  <div class="text-xs font-bold text-brand-yellow mb-1">
-                    {{ nextRankDiff() }} XP to next rank
+                    {{ nextRankDiff() }} XP sonraki sıraya
                  </div>
                  <!-- Mini Progress bar -->
                  <div class="w-24 h-2 bg-gray-600 rounded-full overflow-hidden">
@@ -130,21 +130,21 @@ interface RankUser {
                   </div>
 
                   <h2 class="text-2xl font-extrabold text-gray-800 mb-1">{{ selectedUser()!.name }}</h2>
-                  <p class="text-brand-green font-bold text-sm mb-6">Level 3 Scholar</p>
+                  <p class="text-brand-green font-bold text-sm mb-6">Seviye 3 Bilgin</p>
 
                   <div class="grid grid-cols-2 gap-4 mb-6">
                       <div class="bg-gray-50 rounded-xl p-3 border border-gray-100">
                           <span class="block font-extrabold text-xl text-gray-700">{{ selectedUser()!.xp }}</span>
-                          <span class="text-[10px] text-gray-400 font-bold uppercase">Total XP</span>
+                          <span class="text-[10px] text-gray-400 font-bold uppercase">Toplam XP</span>
                       </div>
                       <div class="bg-gray-50 rounded-xl p-3 border border-gray-100">
                            <span class="block font-extrabold text-xl text-brand-red">#{{ selectedUser()!.rank }}</span>
-                           <span class="text-[10px] text-gray-400 font-bold uppercase">Rank</span>
+                           <span class="text-[10px] text-gray-400 font-bold uppercase">Sıralama</span>
                       </div>
                   </div>
 
                   <button (click)="closeProfile()" class="w-full bg-brand-blue text-white font-bold py-3 rounded-xl border-b-4 border-blue-600 active:border-b-0 active:translate-y-1 transition-all uppercase tracking-wide btn-3d">
-                      High Five! 👋
+                      Çak Bir Beşlik! 👋
                   </button>
               </div>
           </div>

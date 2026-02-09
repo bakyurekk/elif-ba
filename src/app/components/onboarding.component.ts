@@ -27,7 +27,7 @@ import { GameService } from '../services/game.service';
           }
         </div>
         
-        <button (click)="skip()" class="text-gray-400 font-bold uppercase text-sm hover:bg-gray-100 px-3 py-2 rounded-xl">Skip</button>
+        <button (click)="skip()" class="text-gray-400 font-bold uppercase text-sm hover:bg-gray-100 px-3 py-2 rounded-xl">Atla</button>
       </div>
 
       <!-- Content Area -->
@@ -41,8 +41,8 @@ import { GameService } from '../services/game.service';
                <span class="absolute top-10 right-4 text-4xl text-brand-green font-bold animate-bounce-short">ا</span>
                <span class="absolute bottom-10 left-4 text-4xl text-brand-blue font-bold animate-bounce-short" style="animation-delay: 0.2s">ب</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-gray-700 mb-4">Learn Elif-Ba Easily</h2>
-            <p class="text-lg text-gray-500 font-medium">Start from zero with simple, bite-sized lessons designed for everyone.</p>
+            <h2 class="text-2xl font-extrabold text-gray-700 mb-4">Elif-Ba'yı Kolayca Öğren</h2>
+            <p class="text-lg text-gray-500 font-medium">Herkes için tasarlanmış basit, küçük derslerle sıfırdan başlayın.</p>
           </div>
         }
 
@@ -52,8 +52,8 @@ import { GameService } from '../services/game.service';
             <div class="w-64 h-64 bg-brand-purple/20 rounded-full flex items-center justify-center mb-8">
                <span class="material-symbols-rounded text-brand-purple text-9xl">stadia_controller</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-gray-700 mb-4">Learn by Playing</h2>
-            <p class="text-lg text-gray-500 font-medium">Gamified lessons make learning Arabic alphabet fun and addictive.</p>
+            <h2 class="text-2xl font-extrabold text-gray-700 mb-4">Oynayarak Öğren</h2>
+            <p class="text-lg text-gray-500 font-medium">Oyunlaştırılmış dersler Arap alfabesini öğrenmeyi eğlenceli kılıyor.</p>
           </div>
         }
 
@@ -63,15 +63,15 @@ import { GameService } from '../services/game.service';
              <div class="w-64 h-64 bg-brand-blue/20 rounded-full flex items-center justify-center mb-8">
                <span class="material-symbols-rounded text-brand-blue text-9xl">monitoring</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-gray-700 mb-4">Track Your Progress</h2>
-            <p class="text-lg text-gray-500 font-medium">Earn XP, keep your streak alive, and master the alphabet!</p>
+            <h2 class="text-2xl font-extrabold text-gray-700 mb-4">İlerlemenizi Takip Edin</h2>
+            <p class="text-lg text-gray-500 font-medium">XP kazanın, serinizi koruyun ve alfabede ustalaşın!</p>
           </div>
         }
 
         <!-- Step 3: Who is this for? -->
         @if (step() === 3) {
           <div class="animate-pop w-full flex flex-col items-center">
-             <h2 class="text-2xl font-extrabold text-gray-700 mb-8">Who will use Elif-BA?</h2>
+             <h2 class="text-2xl font-extrabold text-gray-700 mb-8">Elif-BA'yı kim kullanacak?</h2>
              
              <div class="w-full space-y-4">
                  <!-- Child Option -->
@@ -81,8 +81,8 @@ import { GameService } from '../services/game.service';
                      <div class="w-20 h-20 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-4">
                         <span class="material-symbols-rounded text-brand-yellow text-5xl">child_care</span>
                      </div>
-                     <h3 class="font-bold text-xl text-gray-800 mb-2">My Child</h3>
-                     <p class="text-sm text-gray-500 font-medium">Playful lessons with extra encouragement</p>
+                     <h3 class="font-bold text-xl text-gray-800 mb-2">Çocuğum</h3>
+                     <p class="text-sm text-gray-500 font-medium">Ekstra teşvik içeren eğlenceli dersler</p>
                  </div>
 
                  <!-- Adult Option -->
@@ -92,8 +92,8 @@ import { GameService } from '../services/game.service';
                      <div class="w-20 h-20 bg-brand-blue/20 rounded-full flex items-center justify-center mb-4">
                         <span class="material-symbols-rounded text-brand-blue text-5xl">person</span>
                      </div>
-                     <h3 class="font-bold text-xl text-gray-800 mb-2">Myself</h3>
-                     <p class="text-sm text-gray-500 font-medium">Clear explanations and focused learning</p>
+                     <h3 class="font-bold text-xl text-gray-800 mb-2">Kendim</h3>
+                     <p class="text-sm text-gray-500 font-medium">Net açıklamalar ve odaklanmış öğrenme</p>
                  </div>
              </div>
           </div>
@@ -102,8 +102,8 @@ import { GameService } from '../services/game.service';
         <!-- Step 4: Daily Goal -->
         @if (step() === 4) {
           <div class="animate-pop w-full flex flex-col items-center">
-             <h2 class="text-2xl font-extrabold text-gray-700 mb-2">How much time to study?</h2>
-             <p class="text-gray-500 font-medium mb-8">Small steps every day make a big difference.</p>
+             <h2 class="text-2xl font-extrabold text-gray-700 mb-2">Günde ne kadar çalışma?</h2>
+             <p class="text-gray-500 font-medium mb-8">Her gün atılan küçük adımlar büyük fark yaratır.</p>
              
              <div class="w-full space-y-3">
                  <!-- 5 Mins -->
@@ -111,8 +111,8 @@ import { GameService } from '../services/game.service';
                       class="border-2 rounded-2xl p-4 flex items-center justify-between cursor-pointer transition-all active:scale-95"
                       [ngClass]="game.dailyGoal() === 5 ? 'border-brand-green bg-green-50 shadow-md ring-2 ring-brand-green ring-offset-2' : 'border-gray-200 bg-white'">
                       <div class="flex flex-col text-left">
-                          <span class="font-extrabold text-lg text-gray-700">5 minutes / day</span>
-                          <span class="text-sm text-gray-500 font-bold">Easy & relaxed</span>
+                          <span class="font-extrabold text-lg text-gray-700">5 dakika / gün</span>
+                          <span class="text-sm text-gray-500 font-bold">Kolay ve rahat</span>
                       </div>
                       <div class="bg-white/50 px-3 py-1 rounded-lg border border-gray-100 text-brand-yellow font-extrabold text-sm shadow-sm">
                           10 XP
@@ -124,11 +124,11 @@ import { GameService } from '../services/game.service';
                       class="border-2 rounded-2xl p-4 flex items-center justify-between cursor-pointer transition-all active:scale-95 relative overflow-hidden"
                       [ngClass]="game.dailyGoal() === 10 ? 'border-brand-green bg-green-50 shadow-md ring-2 ring-brand-green ring-offset-2' : 'border-gray-200 bg-white'">
                       @if(game.dailyGoal() === 10) {
-                          <div class="absolute top-0 right-0 bg-brand-green text-white text-[10px] px-2 py-0.5 rounded-bl-lg font-bold">RECOMMENDED</div>
+                          <div class="absolute top-0 right-0 bg-brand-green text-white text-[10px] px-2 py-0.5 rounded-bl-lg font-bold">ÖNERİLEN</div>
                       }
                       <div class="flex flex-col text-left">
-                          <span class="font-extrabold text-lg text-gray-700">10 minutes / day</span>
-                          <span class="text-sm text-gray-500 font-bold">Standard</span>
+                          <span class="font-extrabold text-lg text-gray-700">10 dakika / gün</span>
+                          <span class="text-sm text-gray-500 font-bold">Standart</span>
                       </div>
                       <div class="bg-white/50 px-3 py-1 rounded-lg border border-gray-100 text-brand-yellow font-extrabold text-sm shadow-sm">
                           20 XP
@@ -140,8 +140,8 @@ import { GameService } from '../services/game.service';
                       class="border-2 rounded-2xl p-4 flex items-center justify-between cursor-pointer transition-all active:scale-95"
                       [ngClass]="game.dailyGoal() === 15 ? 'border-brand-green bg-green-50 shadow-md ring-2 ring-brand-green ring-offset-2' : 'border-gray-200 bg-white'">
                       <div class="flex flex-col text-left">
-                          <span class="font-extrabold text-lg text-gray-700">15 minutes / day</span>
-                          <span class="text-sm text-gray-500 font-bold">Serious learner</span>
+                          <span class="font-extrabold text-lg text-gray-700">15 dakika / gün</span>
+                          <span class="text-sm text-gray-500 font-bold">Ciddi öğrenci</span>
                       </div>
                       <div class="bg-white/50 px-3 py-1 rounded-lg border border-gray-100 text-brand-yellow font-extrabold text-sm shadow-sm">
                           30 XP
@@ -156,7 +156,7 @@ import { GameService } from '../services/game.service';
       <!-- Bottom Action -->
       <div class="p-6 border-t border-gray-100">
         <button (click)="next()" class="w-full bg-brand-green text-white font-bold text-lg py-4 rounded-2xl border-b-4 border-brand-greenDark active:border-b-0 active:translate-y-1 transition-all uppercase tracking-wide shadow-lg shadow-brand-green/30">
-          {{ step() === 4 ? 'Set Daily Goal' : 'Continue' }}
+          {{ step() === 4 ? 'Günlük Hedef Belirle' : 'Devam Et' }}
         </button>
       </div>
     </div>

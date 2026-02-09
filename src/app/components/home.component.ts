@@ -108,8 +108,8 @@ import { BottomNavComponent } from "./bottom-nav.component";
             class="w-full bg-brand-green p-4 rounded-2xl mb-8 text-white flex justify-between items-center shadow-lg shadow-brand-green/20"
           >
             <div>
-              <h3 class="font-extrabold text-xl">Unit 1</h3>
-              <p class="opacity-90 font-medium">Basic Letters</p>
+              <h3 class="font-extrabold text-xl">Ünite 1</h3>
+              <p class="opacity-90 font-medium">Temel Harfler</p>
             </div>
             <span class="material-symbols-rounded text-3xl opacity-50"
               >menu_book</span
@@ -144,7 +144,7 @@ import { BottomNavComponent } from "./bottom-nav.component";
                   <div
                     class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-xl border-2 border-brand-gray text-brand-green font-bold text-sm uppercase animate-bounce mb-2 shadow-sm whitespace-nowrap z-20"
                   >
-                    Start!
+                    Başla!
                     <div
                       class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b-2 border-r-2 border-brand-gray transform rotate-45"
                     ></div>
@@ -206,8 +206,8 @@ import { BottomNavComponent } from "./bottom-nav.component";
             class="w-full bg-brand-purple p-4 rounded-2xl mb-8 text-white flex justify-between items-center shadow-lg shadow-brand-purple/20"
           >
             <div>
-              <h3 class="font-extrabold text-xl">Unit 2</h3>
-              <p class="opacity-90 font-medium">Harakat (Vowels)</p>
+              <h3 class="font-extrabold text-xl">Ünite 2</h3>
+              <p class="opacity-90 font-medium">Harekeler (Sesli Harfler)</p>
             </div>
             @if (unit2Locked()) {
               <span class="material-symbols-rounded text-3xl opacity-50"
@@ -248,7 +248,7 @@ import { BottomNavComponent } from "./bottom-nav.component";
                   <div
                     class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-xl border-2 border-brand-gray text-brand-green font-bold text-sm uppercase animate-bounce mb-2 shadow-sm whitespace-nowrap z-20"
                   >
-                    Start!
+                    Başla!
                     <div
                       class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b-2 border-r-2 border-brand-gray transform rotate-45"
                     ></div>
@@ -305,7 +305,7 @@ import { BottomNavComponent } from "./bottom-nav.component";
 
         <div class="h-20 flex items-center justify-center opacity-50 mt-8">
           <span class="text-brand-gray font-bold text-lg"
-            >More units coming soon...</span
+            >Daha fazla ünite çok yakında...</span
           >
         </div>
       </div>

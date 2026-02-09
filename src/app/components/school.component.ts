@@ -18,8 +18,8 @@ import { BottomNavComponent } from './bottom-nav.component';
               <span class="material-symbols-rounded text-white text-2xl">school</span>
             </div>
             <div>
-              <h1 class="text-xl font-extrabold text-gray-800">My Learning</h1>
-              <p class="text-xs text-gray-500 font-medium">Track your progress</p>
+              <h1 class="text-xl font-extrabold text-gray-800">Öğrenmem</h1>
+              <p class="text-xs text-gray-500 font-medium">İlerlemenizi takip edin</p>
             </div>
           </div>
           
@@ -42,7 +42,7 @@ import { BottomNavComponent } from './bottom-nav.component';
               <span class="material-symbols-rounded text-brand-green text-3xl">check_circle</span>
               <span class="text-2xl font-extrabold text-gray-800">{{ completedLessons() }}</span>
             </div>
-            <p class="text-xs text-gray-500 font-bold uppercase">Completed</p>
+            <p class="text-xs text-gray-500 font-bold uppercase">Tamamlandı</p>
             <div class="mt-2 h-1.5 bg-gray-100 rounded-full overflow-hidden">
               <div 
                 class="h-full bg-brand-green transition-all duration-500"
@@ -57,8 +57,8 @@ import { BottomNavComponent } from './bottom-nav.component';
               <span class="material-symbols-rounded text-brand-red text-3xl">local_fire_department</span>
               <span class="text-2xl font-extrabold text-gray-800">{{ game.streak() }}</span>
             </div>
-            <p class="text-xs text-gray-500 font-bold uppercase">Day Streak</p>
-            <p class="text-xs text-brand-red font-bold mt-2">Keep it up! 🔥</p>
+            <p class="text-xs text-gray-500 font-bold uppercase">Gün Serisi</p>
+            <p class="text-xs text-brand-red font-bold mt-2">Böyle devam et! 🔥</p>
           </div>
 
           <!-- Total Hearts -->
@@ -67,8 +67,8 @@ import { BottomNavComponent } from './bottom-nav.component';
               <span class="material-symbols-rounded text-brand-red text-3xl fill-current">favorite</span>
               <span class="text-2xl font-extrabold text-gray-800">{{ game.hearts() }}</span>
             </div>
-            <p class="text-xs text-gray-500 font-bold uppercase">Hearts Left</p>
-            <p class="text-xs text-gray-500 mt-2">Max: 5 hearts</p>
+            <p class="text-xs text-gray-500 font-bold uppercase">Kalan Kalpler</p>
+            <p class="text-xs text-gray-500 mt-2">Maks: 5 kalp</p>
           </div>
 
           <!-- Progress Percentage -->
@@ -77,15 +77,15 @@ import { BottomNavComponent } from './bottom-nav.component';
               <span class="material-symbols-rounded text-brand-blue text-3xl">trending_up</span>
               <span class="text-2xl font-extrabold text-gray-800">{{ game.progress() }}%</span>
             </div>
-            <p class="text-xs text-gray-500 font-bold uppercase">Progress</p>
-            <p class="text-xs text-gray-500 mt-2">{{ totalLessons() - completedLessons() }} to go</p>
+            <p class="text-xs text-gray-500 font-bold uppercase">İlerleme</p>
+            <p class="text-xs text-gray-500 mt-2">{{ totalLessons() - completedLessons() }} kaldı</p>
           </div>
         </div>
 
         <!-- Learning Path Summary -->
         <div class="bg-white rounded-2xl p-5 border-2 border-gray-100 shadow-sm">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-extrabold text-gray-800">Learning Path</h2>
+            <h2 class="text-lg font-extrabold text-gray-800">Öğrenme Yolu</h2>
             <span class="material-symbols-rounded text-gray-400">menu_book</span>
           </div>
 
@@ -96,7 +96,7 @@ import { BottomNavComponent } from './bottom-nav.component';
                 <div class="w-8 h-8 bg-brand-green rounded-lg flex items-center justify-center">
                   <span class="text-white font-bold text-sm">1</span>
                 </div>
-                <span class="font-bold text-gray-700">Basic Letters</span>
+                <span class="font-bold text-gray-700">Temel Harfler</span>
               </div>
               <span class="text-sm font-bold text-gray-500">{{ unit1Completed() }}/{{ unit1Total() }}</span>
             </div>
@@ -115,7 +115,7 @@ import { BottomNavComponent } from './bottom-nav.component';
                 <div class="w-8 h-8 bg-brand-purple rounded-lg flex items-center justify-center">
                   <span class="text-white font-bold text-sm">2</span>
                 </div>
-                <span class="font-bold text-gray-700">Harakat (Vowels)</span>
+                <span class="font-bold text-gray-700">Harekeler (Sesli Harfler)</span>
               </div>
               <span class="text-sm font-bold text-gray-500">{{ unit2Completed() }}/{{ unit2Total() }}</span>
             </div>
@@ -131,7 +131,7 @@ import { BottomNavComponent } from './bottom-nav.component';
         <!-- Achievements Section -->
         <div class="bg-white rounded-2xl p-5 border-2 border-gray-100 shadow-sm">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-extrabold text-gray-800">Achievements</h2>
+            <h2 class="text-lg font-extrabold text-gray-800">Başarılar</h2>
             <span class="material-symbols-rounded text-brand-yellow">emoji_events</span>
           </div>
 
@@ -145,7 +145,7 @@ import { BottomNavComponent } from './bottom-nav.component';
                     [ngClass]="completedLessons() >= 1 ? 'text-brand-yellow' : 'text-gray-400'">
                 star
               </span>
-              <span class="text-xs font-bold text-center text-gray-600">First Step</span>
+              <span class="text-xs font-bold text-center text-gray-600">İlk Adım</span>
             </div>
 
             <!-- 5 Lessons Achievement -->
@@ -157,7 +157,7 @@ import { BottomNavComponent } from './bottom-nav.component';
                     [ngClass]="completedLessons() >= 5 ? 'text-brand-green' : 'text-gray-400'">
                 workspace_premium
               </span>
-              <span class="text-xs font-bold text-center text-gray-600">5 Lessons</span>
+              <span class="text-xs font-bold text-center text-gray-600">5 Ders</span>
             </div>
 
             <!-- 10 Lessons Achievement -->
@@ -169,7 +169,7 @@ import { BottomNavComponent } from './bottom-nav.component';
                     [ngClass]="completedLessons() >= 10 ? 'text-brand-blue' : 'text-gray-400'">
                 military_tech
               </span>
-              <span class="text-xs font-bold text-center text-gray-600">10 Lessons</span>
+              <span class="text-xs font-bold text-center text-gray-600">10 Ders</span>
             </div>
 
             <!-- Streak Achievement -->
@@ -181,7 +181,7 @@ import { BottomNavComponent } from './bottom-nav.component';
                     [ngClass]="game.streak() >= 3 ? 'text-brand-red' : 'text-gray-400'">
                 local_fire_department
               </span>
-              <span class="text-xs font-bold text-center text-gray-600">3 Day Streak</span>
+              <span class="text-xs font-bold text-center text-gray-600">3 Gün Serisi</span>
             </div>
 
             <!-- Unit 1 Complete -->
@@ -193,7 +193,7 @@ import { BottomNavComponent } from './bottom-nav.component';
                     [ngClass]="unit1Progress() === 100 ? 'text-brand-green' : 'text-gray-400'">
                 check_circle
               </span>
-              <span class="text-xs font-bold text-center text-gray-600">Unit 1</span>
+              <span class="text-xs font-bold text-center text-gray-600">Ünite 1</span>
             </div>
 
             <!-- Perfect Score -->
@@ -205,14 +205,14 @@ import { BottomNavComponent } from './bottom-nav.component';
                     [ngClass]="game.progress() === 100 ? 'text-brand-purple' : 'text-gray-400'">
                 emoji_events
               </span>
-              <span class="text-xs font-bold text-center text-gray-600">Perfect!</span>
+              <span class="text-xs font-bold text-center text-gray-600">Mükemmel!</span>
             </div>
           </div>
         </div>
 
         <!-- Quick Actions -->
         <div class="bg-white rounded-2xl p-5 border-2 border-gray-100 shadow-sm">
-          <h2 class="text-lg font-extrabold text-gray-800 mb-4">Quick Actions</h2>
+          <h2 class="text-lg font-extrabold text-gray-800 mb-4">Hızlı İşlemler</h2>
           
           <div class="space-y-3">
             <button 
@@ -220,7 +220,7 @@ import { BottomNavComponent } from './bottom-nav.component';
               class="w-full bg-brand-green text-white font-bold py-4 rounded-xl border-b-4 border-brand-greenDark active:border-b-0 active:translate-y-1 transition-all flex items-center justify-center space-x-2"
             >
               <span class="material-symbols-rounded">play_arrow</span>
-              <span>Continue Learning</span>
+              <span>Öğrenmeye Devam Et</span>
             </button>
 
             <button 
@@ -228,7 +228,7 @@ import { BottomNavComponent } from './bottom-nav.component';
               class="w-full bg-white text-brand-blue font-bold py-4 rounded-xl border-2 border-brand-blue active:scale-95 transition-all flex items-center justify-center space-x-2"
             >
               <span class="material-symbols-rounded">refresh</span>
-              <span>Review Lessons</span>
+              <span>Dersleri Gözden Geçir</span>
             </button>
           </div>
         </div>

@@ -47,9 +47,9 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
             class="text-gray-400 font-bold uppercase tracking-widest text-sm mb-4"
           >
             @if (isMixed()) {
-              Mixed Practice
+              Karışık Pratik
             } @else {
-              {{ isUnit2() ? "New Vowel Mark" : "New Letter" }}
+              {{ isUnit2() ? "Yeni Sesli Harf İşareti" : "Yeni Harf" }}
             }
           </h2>
 
@@ -80,7 +80,7 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
               (click)="nextPhase()"
               class="w-full bg-brand-green text-white font-bold text-lg py-4 rounded-2xl border-b-4 border-brand-greenDark active:border-b-0 active:translate-y-1 transition-all uppercase tracking-wide btn-3d"
             >
-              Start Lesson
+              Derse Başla
             </button>
           </div>
         </div>
@@ -93,7 +93,7 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
         >
           <h2 class="text-2xl font-extrabold text-gray-700 mb-8 self-start">
             {{
-              isUnit2() ? "Listen to the sound change" : "Listen to the sound"
+              isUnit2() ? "Ses değişimini dinle" : "Sesi dinle"
             }}
           </h2>
 
@@ -134,9 +134,9 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
               @if (isUnit2()) {
                 "{{ activeLesson()?.baseLetter }}" + "{{
                   activeLesson()?.name
-                }}" makes the sound...
+                }}" şu sesi çıkarır...
               } @else {
-                "{{ activeLesson()?.name }}" makes the sound...
+                "{{ activeLesson()?.name }}" şu sesi çıkarır...
               }
             </p>
           </div>
@@ -148,9 +148,9 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
         <div class="flex-1 flex flex-col px-6 pt-4 animate-pop">
           <h2 class="text-2xl font-extrabold text-gray-700 mb-6">
             @if (isUnit2()) {
-              Which one is the {{ activeLesson()?.name }}?
+              {{ activeLesson()?.name }} hangisi?
             } @else {
-              Which one is "{{ activeLesson()?.name }}"?
+              "{{ activeLesson()?.name }}" hangisi?
             }
           </h2>
 
@@ -192,8 +192,8 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
           <p class="text-gray-400 font-bold self-start mb-8">
             {{
               game.userType() === "CHILD"
-                ? "Trace the letter with your finger 👆"
-                : "Trace the letter below"
+                ? "Harfi parmağınla çiz 👆"
+                : "Aşağıdaki harfi çizin"
             }}
           </p>
 
@@ -252,8 +252,8 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
                 >
                   {{
                     game.userType() === "CHILD"
-                      ? "Keep going! ✍️"
-                      : "Incomplete, try again."
+                      ? "Devam et! ✍️"
+                      : "Tamamlanmadı, tekrar deneyin."
                   }}
                 </span>
               </div>
@@ -263,7 +263,7 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
           <!-- Progress Indicator -->
           <div class="w-full max-w-xs mt-8 flex items-center space-x-4">
             <span class="text-gray-400 font-bold text-xs uppercase"
-              >Progress</span
+              >İlerleme</span
             >
             <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
               <div
@@ -282,10 +282,10 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
       @if (phase() === "BUILD") {
         <div class="flex-1 flex flex-col items-center px-6 pt-4 animate-pop">
           <h2 class="text-2xl font-extrabold text-gray-700 mb-2 self-start">
-            Build the sound
+            Sesi oluştur
           </h2>
           <p class="text-gray-400 font-bold self-start mb-8">
-            Select the correct mark for "{{ getVowelSound() }}"
+            "{{ getVowelSound() }}" için doğru işareti seçin
           </p>
 
           <!-- The Base Letter Stage -->
@@ -347,24 +347,24 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
           </div>
 
           <h1 class="text-4xl font-extrabold text-brand-yellow mb-2">
-            {{ isUnit2() ? "Unit Progress!" : "Great Job!" }}
+            {{ isUnit2() ? "Ünite İlerlemesi!" : "Harika!" }}
           </h1>
           <p class="text-xl text-gray-400 font-bold mb-8">
-            You finished the lesson
+            Dersi tamamladın
           </p>
 
           <div class="flex space-x-4 mb-8 w-full justify-center">
             <div
               class="bg-brand-yellow/10 px-6 py-3 rounded-2xl border-2 border-brand-yellow text-brand-yellow font-extrabold flex flex-col items-center"
             >
-              <span class="text-xs uppercase opacity-70">Total XP</span>
+              <span class="text-xs uppercase opacity-70">Toplam XP</span>
               <span class="text-2xl">+15</span>
             </div>
             <div
               class="bg-brand-blue/10 px-6 py-3 rounded-2xl border-2 border-brand-blue text-brand-blue font-extrabold flex flex-col items-center"
             >
-              <span class="text-xs uppercase opacity-70">Speed</span>
-              <span class="text-2xl">Fast</span>
+              <span class="text-xs uppercase opacity-70">Hız</span>
+              <span class="text-2xl">Hızlı</span>
             </div>
           </div>
         </div>
@@ -389,7 +389,7 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
                 class="material-symbols-rounded text-3xl mr-2 bg-white rounded-full p-1"
                 >check</span
               >
-              {{ game.userType() === "CHILD" ? "You did it!" : "Excellent!" }}
+              {{ game.userType() === "CHILD" ? "Başardın!" : "Mükemmel!" }}
             </div>
           }
           @if (feedbackState() === "WRONG") {
@@ -400,7 +400,7 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
                 class="material-symbols-rounded text-3xl mr-2 bg-white rounded-full p-1"
                 >close</span
               >
-              Oops! Try again.
+              Hay aksi! Tekrar dene.
             </div>
           }
 
@@ -411,7 +411,7 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
             class="w-full font-bold text-lg py-4 rounded-2xl border-b-4 active:border-b-0 active:translate-y-1 transition-all uppercase tracking-wide btn-3d"
             [ngClass]="getContinueBtnClass()"
           >
-            {{ feedbackState() === "NONE" ? "Check" : "Continue" }}
+            {{ feedbackState() === "NONE" ? "Kontrol Et" : "Devam Et" }}
           </button>
         </div>
       }
@@ -422,7 +422,7 @@ type LessonPhase = "INTRO" | "LISTEN" | "QUIZ" | "TRACE" | "BUILD" | "COMPLETE";
             (click)="finishLesson()"
             class="w-full bg-brand-green text-white font-bold text-lg py-4 rounded-2xl border-b-4 border-brand-greenDark active:border-b-0 active:translate-y-1 transition-all uppercase tracking-wide btn-3d"
           >
-            Continue
+            Devam Et
           </button>
         </div>
       }
@@ -443,7 +443,7 @@ export class LessonContainerComponent {
   selectedOption = signal<any>(null);
   feedbackState = signal<"NONE" | "CORRECT" | "WRONG">("NONE");
   titleTxt =
-    this.game.userType() === "CHILD" ? "Let's write!" : "Writing Practice";
+    this.game.userType() === "CHILD" ? "Hadi yazalım!" : "Yazma Pratiği";
 
   // Tracing State
   traceProgress = signal(0);
@@ -499,7 +499,7 @@ export class LessonContainerComponent {
         ...curr,
         letter: mixed.vowel.letter,
         name: mixed.vowel.name,
-        desc: "Mixed Practice: Identify the correct mark.",
+        desc: "Karışık Pratik: Doğru işareti belirleyin.",
         baseLetter: mixed.base,
       };
     }
@@ -735,7 +735,7 @@ export class LessonContainerComponent {
   }
 
   exit() {
-    if (confirm("Quit lesson? You will lose progress.")) {
+    if (confirm("Dersten çık? İlerlemenizi kaybedeceksiniz.")) {
       this.router.navigate(["/home"]);
     }
   }
